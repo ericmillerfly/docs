@@ -1,0 +1,38 @@
+---
+title: "Gmail / Google"
+description: "How to generate a Gmail app password and configure IMAP and SMTP"
+icon: "google"
+---
+
+## Generate an app password
+
+<Steps>
+  <Step title="Enable two-step verification">
+    Open [Google Account security](https://myaccount.google.com/security) and turn on **Two-Step Verification** under "How you sign in to Google."
+  </Step>
+  <Step title="Open App passwords">
+    On the same page, find [**App passwords**](https://myaccount.google.com/apppasswords). If you do not see it, confirm 2FA is enabled and your account type supports it (Workspace admins may need to configure this separately).
+  </Step>
+  <Step title="Create the password">
+    Select an app type (e.g. Mail) and device (e.g. Other with a custom name), then click **Generate**. Copy the **16-character password** (e.g. `abcd efgh ijkl mnop`); spaces can be ignored.
+  </Step>
+</Steps>
+
+<Tip>
+  Personal Gmail accounts: go directly to [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords). For Google Workspace, contact your admin if app passwords are disabled.
+</Tip>
+
+## IMAP / SMTP server settings
+
+| Protocol | Server | Port | Encryption |
+| --- | --- | --- | --- |
+| **IMAP (incoming)** | `imap.gmail.com` | 993 | SSL/TLS |
+| **SMTP (outgoing)** | `smtp.gmail.com` | 465 | SSL/TLS |
+| **SMTP (alternate)** | `smtp.gmail.com` | 587 | STARTTLS |
+
+- **Username**: Full Gmail address (e.g. `you@gmail.com`)
+- **Password**: App password (not your Google account login password)
+
+<Note>
+  Enable **IMAP** in Gmail web: **Settings → Forwarding and POP/IMAP**. Google also offers [OAuth 2.0](https://developers.google.com/gmail/imap/imap-smtp) for developers; OAuth is recommended over app passwords in production.
+</Note>

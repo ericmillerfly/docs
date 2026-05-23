@@ -1,0 +1,36 @@
+---
+title: "Outlook / Microsoft"
+description: "App passwords and IMAP/SMTP settings for Outlook, Hotmail, Live, and Microsoft 365"
+icon: "microsoft"
+---
+
+Applies to personal Microsoft accounts such as `@outlook.com`, `@hotmail.com`, and `@live.com`, as well as some Microsoft 365 mailboxes.
+
+## Generate an app password
+
+<Steps>
+  <Step title="Enable two-step verification">
+    Sign in to [Microsoft account security](https://account.microsoft.com/security) and turn on **Two-step verification**.
+  </Step>
+  <Step title="Create an app password">
+    Under **Advanced security options** or **App passwords**, choose **Create a new app password**. Save the generated password immediately.
+  </Step>
+</Steps>
+
+<Info>
+  For **Microsoft 365 business** accounts managed by an organization, admins may disable SMTP or require Modern Authentication (OAuth). Personal accounts can usually be configured as below.
+</Info>
+
+## IMAP / SMTP server settings
+
+| Protocol | Server | Port | Encryption |
+| --- | --- | --- | --- |
+| **IMAP** | `outlook.office365.com` | 993 | SSL/TLS |
+| **SMTP** | `smtp.office365.com` | 587 | STARTTLS |
+
+- **Username**: Full Microsoft email address
+- **Password**: App password (with 2FA enabled) or account password (without 2FA—not recommended)
+
+<Note>
+  Some older docs reference `smtp.live.com`. For personal Outlook accounts, prefer `smtp.office365.com`.
+</Note>

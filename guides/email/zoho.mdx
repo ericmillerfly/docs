@@ -1,0 +1,31 @@
+---
+title: "Zoho Mail"
+description: "Zoho app passwords and IMAP/SMTP settings"
+icon: "z"
+---
+
+## Generate an app password
+
+<Steps>
+  <Step title="Sign in to Zoho">
+    Go to [Zoho Accounts](https://accounts.zoho.com) and sign in.
+  </Step>
+  <Step title="Create an app password">
+    Open **Security** → **App Passwords**, create a new password, and copy it.
+  </Step>
+</Steps>
+
+## IMAP / SMTP server settings
+
+| Protocol | Server | Port | Encryption |
+| --- | --- | --- | --- |
+| **IMAP** | `imap.zoho.com` | 993 | SSL/TLS |
+| **SMTP** | `smtp.zoho.com` | 465 | SSL/TLS |
+| **SMTP (alternate)** | `smtp.zoho.com` | 587 | STARTTLS |
+
+- **Username**: Full Zoho email address
+- **Password**: App password
+
+<Note>
+  Free and paid plans use the same servers. For custom domain mail (e.g. `@yourdomain.com`), confirm your domain is verified in Zoho.
+</Note>

@@ -1,0 +1,28 @@
+---
+title: "AOL Mail"
+description: "AOL app passwords and IMAP/SMTP settings"
+icon: "envelope"
+---
+
+AOL shares a similar app password flow with Yahoo under the Verizon Media ecosystem.
+
+## Generate an app password
+
+<Steps>
+  <Step title="Enable two-step verification">
+    Open [AOL account security](https://login.aol.com/account/security) and enable **Two-step verification**.
+  </Step>
+  <Step title="Generate an app password">
+    In security settings, generate an **app password** and use it as the password in your third-party client.
+  </Step>
+</Steps>
+
+## IMAP / SMTP server settings
+
+| Protocol | Server | Port | Encryption |
+| --- | --- | --- | --- |
+| **IMAP** | `imap.aol.com` | 993 | SSL/TLS |
+| **SMTP** | `smtp.aol.com` | 465 | SSL/TLS |
+
+- **Username**: Full AOL email address
+- **Password**: App password

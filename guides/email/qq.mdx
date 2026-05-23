@@ -1,0 +1,33 @@
+---
+title: "QQ Mail"
+description: "How to get a QQ Mail authorization code and configure IMAP and SMTP"
+icon: "qq"
+---
+
+QQ Mail uses an **authorization code** instead of an app password. Use the authorization code as the client password—it is **not** your QQ login password.
+
+## Get an authorization code
+
+<Steps>
+  <Step title="Enable IMAP/SMTP">
+    Sign in to [QQ Mail web](https://mail.qq.com) → **Settings** → **Account**. Under **POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV Service**, enable **IMAP/SMTP Service**.
+  </Step>
+  <Step title="Generate the authorization code">
+    Complete SMS verification as prompted. The system will provide a **16-character authorization code**. Copy and save it immediately.
+  </Step>
+</Steps>
+
+## IMAP / SMTP server settings
+
+| Protocol | Server | Port | Encryption |
+| --- | --- | --- | --- |
+| **IMAP** | `imap.qq.com` | 993 | SSL/TLS |
+| **SMTP** | `smtp.qq.com` | 465 | SSL/TLS |
+| **SMTP (alternate)** | `smtp.qq.com` | 587 | STARTTLS |
+
+- **Username**: Full QQ Mail address (e.g. `123456789@qq.com`)
+- **Password**: Authorization code
+
+<Warning>
+  Re-enabling IMAP/SMTP or changing security settings may invalidate the authorization code. Regenerate it in the web UI and update your client.
+</Warning>

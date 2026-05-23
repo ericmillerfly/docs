@@ -1,0 +1,39 @@
+---
+title: "Proton Mail"
+description: "Proton Mail Bridge and IMAP/SMTP setup"
+icon: "shield"
+---
+
+Proton Mail has limited third-party IMAP support. You typically connect standard mail clients through **Proton Mail Bridge** or a paid plan.
+
+## Option 1: Proton Mail Bridge (recommended)
+
+Bridge is a desktop app that exposes standard IMAP/SMTP locally. Free accounts can use it.
+
+| Protocol | Address | Port |
+| --- | --- | --- |
+| **IMAP** | `127.0.0.1` | 1143 |
+| **SMTP** | `127.0.0.1` | 1025 |
+
+- **Username**: Proton Mail address
+- **Password**: Generated in the Bridge UI—not your Proton login password
+
+<Steps>
+  <Step title="Install Bridge">
+    Download and install Proton Mail Bridge from the [Proton website](https://proton.me/mail/bridge).
+  </Step>
+  <Step title="Sign in and get credentials">
+    Sign in to Bridge and copy the IMAP/SMTP username and password it generates for your mail client.
+  </Step>
+  <Step title="Configure your client">
+    Enter the local address and Bridge credentials in your mail client. Keep Bridge running while you use the client.
+  </Step>
+</Steps>
+
+## Option 2: Paid direct IMAP/SMTP
+
+**Proton Mail Plus** and other paid plans support direct connection to `imap.proton.me`. See [Proton's official IMAP documentation](https://proton.me/support/imap-smtp-and-pop3-setup) for current settings.
+
+<Info>
+  Free Proton Mail does not support direct third-party IMAP. Use Bridge instead.
+</Info>

@@ -1,0 +1,87 @@
+---
+title: "Overview"
+description: "General guidance on IMAP, SMTP, and app passwords, plus a quick reference by provider"
+icon: "book-open"
+---
+
+When connecting your mailbox in a third-party email client (Outlook, Apple Mail, Thunderbird, etc.) or a custom app, you typically need **IMAP** (incoming) and **SMTP** (outgoing) server details, plus an **app password** or **authorization code**—not your web login password.
+
+<Warning>
+  Most major email providers require **two-factor authentication (2FA)** before you can generate an app password. Enable 2FA in your account security settings first, then follow the guide for your provider.
+</Warning>
+
+## Key concepts
+
+| Term | Description |
+| --- | --- |
+| **IMAP** | Syncs mail on the server; ideal for multiple devices |
+| **SMTP** | Outgoing protocol used to send email |
+| **App password** | A standalone ~16-character password for third-party apps; can be revoked anytime |
+| **Authorization code** | Client-specific password used by some providers (e.g. QQ, NetEase 163); not your login password |
+| **OAuth** | Some clients support OAuth sign-in and do not require an app password |
+
+## Browse by provider
+
+<Columns cols={2}>
+  <Card title="Gmail / Google" icon="google" href="/guides/email/gmail">
+    App passwords and IMAP/SMTP settings
+  </Card>
+  <Card title="Outlook / Microsoft" icon="microsoft" href="/guides/email/outlook">
+    Microsoft app passwords and server settings
+  </Card>
+  <Card title="Yahoo Mail" icon="yahoo" href="/guides/email/yahoo">
+    Yahoo app passwords and IMAP/SMTP
+  </Card>
+  <Card title="iCloud Mail" icon="apple" href="/guides/email/icloud">
+    Apple app-specific password setup
+  </Card>
+  <Card title="AOL Mail" icon="envelope" href="/guides/email/aol">
+    AOL app passwords and server settings
+  </Card>
+  <Card title="Zoho Mail" icon="z" href="/guides/email/zoho">
+    Zoho app passwords and IMAP/SMTP
+  </Card>
+  <Card title="QQ Mail" icon="qq" href="/guides/email/qq">
+    Authorization codes and server settings
+  </Card>
+  <Card title="NetEase 163 / 126" icon="at" href="/guides/email/netease">
+    Authorization codes and IMAP/SMTP
+  </Card>
+  <Card title="Proton Mail" icon="shield" href="/guides/email/proton">
+    Bridge and paid IMAP options
+  </Card>
+</Columns>
+
+## Quick reference
+
+| Provider | App password / auth code | IMAP server | SMTP server |
+| --- | --- | --- | --- |
+| [Gmail](/guides/email/gmail) | Google app password | `imap.gmail.com:993` | `smtp.gmail.com:465` or `:587` |
+| [Outlook](/guides/email/outlook) | Microsoft app password | `outlook.office365.com:993` | `smtp.office365.com:587` |
+| [Yahoo](/guides/email/yahoo) | Yahoo app password | `imap.mail.yahoo.com:993` | `smtp.mail.yahoo.com:465` |
+| [iCloud](/guides/email/icloud) | Apple app-specific password | `imap.mail.me.com:993` | `smtp.mail.me.com:587` |
+| [AOL](/guides/email/aol) | AOL app password | `imap.aol.com:993` | `smtp.aol.com:465` |
+| [Zoho](/guides/email/zoho) | Zoho app password | `imap.zoho.com:993` | `smtp.zoho.com:465` |
+| [QQ](/guides/email/qq) | Mail authorization code | `imap.qq.com:993` | `smtp.qq.com:465` |
+| [163 / 126](/guides/email/netease) | Mail authorization code | `imap.163.com:993` | `smtp.163.com:465` |
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Connection failed: username or password incorrect">
+    Confirm you are using an **app password or authorization code**, not your web login password. For Gmail, verify IMAP is enabled in the web settings. For QQ/163, regenerate the authorization code if it expired or after re-enabling the service.
+  </Accordion>
+  <Accordion title="SMTP fails but IMAP works">
+    Check that the SMTP port matches the encryption method (465 for SSL, 587 for STARTTLS). Some networks block ports 465/587—try switching ports or networks.
+  </Accordion>
+  <Accordion title="Cannot find Google app passwords">
+    You must enable **two-step verification** first. Google Workspace admins may disable this feature. Some account types that sign in only through Google do not support app passwords.
+  </Accordion>
+  <Accordion title="Outlook requires Modern Authentication">
+    Enterprise Microsoft 365 may disable basic authentication. Use an OAuth-capable client, or ask your IT admin to enable SMTP AUTH if policy allows.
+  </Accordion>
+</AccordionGroup>
+
+<Check>
+  After setup, test both **incoming (IMAP)** and **outgoing (SMTP)** once in your client before using the account in production or automation.
+</Check>

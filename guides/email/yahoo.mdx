@@ -1,0 +1,27 @@
+---
+title: "Yahoo Mail"
+description: "How to generate a Yahoo app password and configure IMAP and SMTP"
+icon: "yahoo"
+---
+
+## Generate an app password
+
+<Steps>
+  <Step title="Enable two-step verification">
+    Open [Yahoo account security](https://login.yahoo.com/account/security) and enable **Two-step verification**.
+  </Step>
+  <Step title="Generate an app password">
+    Click **Generate app password**, choose an app (e.g. Other App), name it, then copy the generated password.
+  </Step>
+</Steps>
+
+## IMAP / SMTP server settings
+
+| Protocol | Server | Port | Encryption |
+| --- | --- | --- | --- |
+| **IMAP** | `imap.mail.yahoo.com` | 993 | SSL/TLS |
+| **SMTP** | `smtp.mail.yahoo.com` | 465 | SSL/TLS |
+| **SMTP (alternate)** | `smtp.mail.yahoo.com` | 587 | STARTTLS |
+
+- **Username**: Full Yahoo email address
+- **Password**: App password

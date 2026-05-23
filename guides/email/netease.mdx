@@ -1,0 +1,42 @@
+---
+title: "NetEase 163 / 126"
+description: "Authorization codes and IMAP/SMTP settings for NetEase 163 and 126 Mail"
+icon: "at"
+---
+
+NetEase Mail follows a similar flow to QQ Mail: enable IMAP/SMTP in the web UI, then obtain an **authorization code** via SMS verification (not your login password).
+
+## Get an authorization code
+
+<Steps>
+  <Step title="Enable IMAP/SMTP">
+    Sign in to NetEase Mail web → **Settings** → **POP3/SMTP/IMAP**, and enable **IMAP/SMTP Service**.
+  </Step>
+  <Step title="Generate the authorization code">
+    Complete phone verification as prompted. Copy the **authorization code** and use it as the client password.
+  </Step>
+</Steps>
+
+## 163 Mail
+
+| Protocol | Server | Port | Encryption |
+| --- | --- | --- | --- |
+| **IMAP** | `imap.163.com` | 993 | SSL/TLS |
+| **SMTP** | `smtp.163.com` | 465 | SSL/TLS |
+
+- **Username**: Full 163 address (e.g. `name@163.com`)
+- **Password**: Authorization code
+
+## 126 Mail
+
+| Protocol | Server | Port | Encryption |
+| --- | --- | --- | --- |
+| **IMAP** | `imap.126.com` | 993 | SSL/TLS |
+| **SMTP** | `smtp.126.com` | 465 | SSL/TLS |
+
+- **Username**: Full 126 address (e.g. `name@126.com`)
+- **Password**: Authorization code
+
+<Note>
+  163 and 126 are separate account systems with different server hostnames. Use the settings that match your email domain suffix.
+</Note>

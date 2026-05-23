@@ -1,0 +1,30 @@
+---
+title: "iCloud Mail"
+description: "Apple app-specific passwords and IMAP/SMTP settings for iCloud Mail"
+icon: "apple"
+---
+
+## Generate an app-specific password
+
+<Steps>
+  <Step title="Enable two-factor authentication">
+    Turn on **Two-Factor Authentication** in Apple ID settings on your iPhone or Mac.
+  </Step>
+  <Step title="Create an app-specific password">
+    Go to [appleid.apple.com](https://appleid.apple.com) → **Sign-In and Security** → **App-Specific Passwords** → **Generate an app-specific password**. Enter a label (e.g. "Mail Client") and copy the password.
+  </Step>
+</Steps>
+
+## IMAP / SMTP server settings
+
+| Protocol | Server | Port | Encryption |
+| --- | --- | --- | --- |
+| **IMAP** | `imap.mail.me.com` | 993 | SSL/TLS |
+| **SMTP** | `smtp.mail.me.com` | 587 | STARTTLS |
+
+- **Username**: iCloud email address (`name@icloud.com`, `@me.com`, or `@mac.com`)
+- **Password**: App-specific password
+
+<Warning>
+  `@icloud.com` aliases must be enabled in iCloud Mail settings. The SMTP "From" address must match your primary iCloud address or a verified alias.
+</Warning>
