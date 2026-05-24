@@ -37,3 +37,33 @@ Bridge is a desktop app that exposes standard IMAP/SMTP locally. Free accounts c
 <Info>
   Free Proton Mail does not support direct third-party IMAP. Use Bridge instead.
 </Info>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Why is ProtonMail Bridge required?">
+    Proton's servers only see end-to-end encrypted mail. Bridge runs on your computer, holds your decryption key, and exposes a standard IMAP/SMTP interface locally. Without Bridge, third-party clients cannot decrypt your mail.
+  </Accordion>
+  <Accordion title="Is Bridge free?">
+    Bridge itself is free to install, but requires a paid Proton plan (Mail Plus, Unlimited, or Business). It's not available on the free Proton tier.
+  </Accordion>
+  <Accordion title="Can I use Bridge with a cloud-hosted mail client?">
+    Not out of the box — Bridge serves IMAP on `127.0.0.1` (localhost). A client running in the cloud cannot reach your local Bridge without a tunnel (e.g. WireGuard, Tailscale) or a self-hosted client on the same machine as Bridge.
+  </Accordion>
+</AccordionGroup>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://sendroid.app/docs/guides/email/proton#faq",
+      mainEntity: [
+        { "@type": "Question", name: "Why is ProtonMail Bridge required?", acceptedAnswer: { "@type": "Answer", text: "Proton's servers only see end-to-end encrypted mail. Bridge runs on your computer, holds your decryption key, and exposes a standard IMAP/SMTP interface locally." } },
+        { "@type": "Question", name: "Is Bridge free?", acceptedAnswer: { "@type": "Answer", text: "Bridge itself is free to install, but requires a paid Proton plan (Mail Plus, Unlimited, or Business). It's not available on the free Proton tier." } },
+        { "@type": "Question", name: "Can I use Bridge with a cloud-hosted mail client?", acceptedAnswer: { "@type": "Answer", text: "Not out of the box — Bridge serves IMAP on 127.0.0.1 (localhost). A client running in the cloud cannot reach your local Bridge without a tunnel or a self-hosted client on the same machine." } },
+      ],
+    }),
+  }}
+/>

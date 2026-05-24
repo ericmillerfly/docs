@@ -34,3 +34,33 @@ Applies to personal Microsoft accounts such as `@outlook.com`, `@hotmail.com`, a
 <Note>
   Some older docs reference `smtp.live.com`. For personal Outlook accounts, prefer `smtp.office365.com`.
 </Note>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Do I need an app password for Outlook.com?">
+    Only if you have two-step verification on. With 2-step off, your normal password works — but we strongly recommend turning 2-step on and using an app password.
+  </Accordion>
+  <Accordion title="My Microsoft 365 admin disabled IMAP. What now?">
+    Ask your admin to enable IMAP for your account in **admin.exchange.microsoft.com** → Recipients → Mailboxes → select your mailbox → Manage email apps → enable **IMAP**. Some tenants also block SMTP AUTH and need that enabled separately.
+  </Accordion>
+  <Accordion title="Does this work with Hotmail / Live.com / MSN?">
+    Yes. All `@hotmail.com`, `@live.com`, `@msn.com`, and `@outlook.com` addresses use the same backend (`outlook.office365.com` IMAP, `smtp.office365.com` SMTP).
+  </Accordion>
+</AccordionGroup>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://sendroid.app/docs/guides/email/outlook#faq",
+      mainEntity: [
+        { "@type": "Question", name: "Do I need an app password for Outlook.com?", acceptedAnswer: { "@type": "Answer", text: "Only if you have two-step verification on. With 2-step off, your normal password works — but we recommend turning 2-step on and using an app password." } },
+        { "@type": "Question", name: "My Microsoft 365 admin disabled IMAP. What now?", acceptedAnswer: { "@type": "Answer", text: "Ask your admin to enable IMAP for your account in admin.exchange.microsoft.com → Recipients → Mailboxes → Manage email apps → enable IMAP. Some tenants also block SMTP AUTH and need that enabled separately." } },
+        { "@type": "Question", name: "Does this work with Hotmail / Live.com / MSN?", acceptedAnswer: { "@type": "Answer", text: "Yes. All @hotmail.com, @live.com, @msn.com, and @outlook.com addresses use the same backend (outlook.office365.com IMAP, smtp.office365.com SMTP)." } },
+      ],
+    }),
+  }}
+/>

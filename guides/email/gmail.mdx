@@ -36,3 +36,54 @@ icon: "google"
 <Note>
   Enable **IMAP** in Gmail web: **Settings → Forwarding and POP/IMAP**. Google also offers [OAuth 2.0](https://developers.google.com/gmail/imap/imap-smtp) for developers; OAuth is recommended over app passwords in production.
 </Note>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Why do I need an app password instead of my regular Gmail password?">
+    Google blocks third-party clients from authenticating with your main account password. App passwords are scoped to mail only and revokable independently — generate at [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords).
+  </Accordion>
+  <Accordion title="Where do I enable IMAP in Gmail?">
+    Gmail web → click the gear icon → **See all settings** → **Forwarding and POP/IMAP** → **Enable IMAP** → Save. Without this, even a correct app password will fail to connect.
+  </Accordion>
+  <Accordion title="Does this work with Google Workspace?">
+    Yes if your admin has IMAP and app passwords enabled. Some orgs disable both in the Admin Console (Apps → Google Workspace → Gmail → End User Access). Check with your IT admin if connections fail.
+  </Accordion>
+</AccordionGroup>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://sendroid.app/docs/guides/email/gmail#faq",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Why do I need an app password instead of my regular Gmail password?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Google blocks third-party clients from authenticating with your main account password. App passwords are scoped to mail only and revokable independently — generate at myaccount.google.com/apppasswords.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Where do I enable IMAP in Gmail?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Gmail web → gear icon → See all settings → Forwarding and POP/IMAP → Enable IMAP → Save. Without this, even a correct app password will fail to connect.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Does this work with Google Workspace?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Yes if your admin has IMAP and app passwords enabled. Some orgs disable both in the Google Workspace Admin Console (Apps → Gmail → End User Access).",
+          },
+        },
+      ],
+    }),
+  }}
+/>

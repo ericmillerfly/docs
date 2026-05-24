@@ -29,3 +29,33 @@ icon: "z"
 <Note>
   Free and paid plans use the same servers. For custom domain mail (e.g. `@yourdomain.com`), confirm your domain is verified in Zoho.
 </Note>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Does Zoho Free work with IMAP?">
+    Yes — Zoho Mail's free tier supports IMAP/SMTP. Enable IMAP in **Zoho Mail Settings** → **Mail Accounts** → **IMAP Access** before connecting.
+  </Accordion>
+  <Accordion title="Why is my IMAP login failing?">
+    Zoho requires an app-specific password if you have 2FA enabled (recommended). Generate it in **Zoho Accounts** → **Security** → **App Passwords** and use that instead of your login password.
+  </Accordion>
+  <Accordion title="Does it support custom domains hosted on Zoho?">
+    Yes — use your custom-domain email address (e.g. `you@yourcompany.com`) as the username with the standard `imap.zoho.com` / `smtp.zoho.com` hosts. Confirm the domain is verified in Zoho.
+  </Accordion>
+</AccordionGroup>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://sendroid.app/docs/guides/email/zoho#faq",
+      mainEntity: [
+        { "@type": "Question", name: "Does Zoho Free work with IMAP?", acceptedAnswer: { "@type": "Answer", text: "Yes — Zoho Mail's free tier supports IMAP/SMTP. Enable IMAP in Zoho Mail Settings → Mail Accounts → IMAP Access before connecting." } },
+        { "@type": "Question", name: "Why is my IMAP login failing?", acceptedAnswer: { "@type": "Answer", text: "Zoho requires an app-specific password if you have 2FA enabled. Generate it in Zoho Accounts → Security → App Passwords and use that instead of your login password." } },
+        { "@type": "Question", name: "Does it support custom domains hosted on Zoho?", acceptedAnswer: { "@type": "Answer", text: "Yes — use your custom-domain email address as the username with the standard imap.zoho.com / smtp.zoho.com hosts. Confirm the domain is verified in Zoho." } },
+      ],
+    }),
+  }}
+/>

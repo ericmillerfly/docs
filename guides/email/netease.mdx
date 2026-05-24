@@ -40,3 +40,33 @@ NetEase Mail follows a similar flow to QQ Mail: enable IMAP/SMTP in the web UI, 
 <Note>
   163 and 126 are separate account systems with different server hostnames. Use the settings that match your email domain suffix.
 </Note>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Which NetEase email domains are supported?">
+    163.com, 126.com, yeah.net, and NetEase Enterprise Mail (qiye.163.com) all use the same authorization-code flow. Use the IMAP/SMTP hosts that match the address suffix (`imap.163.com` for 163, `imap.126.com` for 126).
+  </Accordion>
+  <Accordion title="What is 客户端授权密码 (client authorization password)?">
+    NetEase's app password for IMAP/POP/SMTP — a separate password from your web login. Set it in **Mail Settings** → **POP3/SMTP/IMAP**. SMS verification is required the first time.
+  </Accordion>
+  <Accordion title="Why does my IMAP keep getting blocked?">
+    NetEase requires SMS verification the first time you turn on IMAP and again periodically. Check **Settings** → **POP3/SMTP/IMAP** for any verification prompt or expired authorization code.
+  </Accordion>
+</AccordionGroup>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://sendroid.app/docs/guides/email/netease#faq",
+      mainEntity: [
+        { "@type": "Question", name: "Which NetEase email domains are supported?", acceptedAnswer: { "@type": "Answer", text: "163.com, 126.com, yeah.net, and NetEase Enterprise Mail (qiye.163.com) all use the same authorization-code flow. Use the IMAP/SMTP hosts that match the address suffix." } },
+        { "@type": "Question", name: "What is the client authorization password?", acceptedAnswer: { "@type": "Answer", text: "NetEase's app password for IMAP/POP/SMTP — a separate password from your web login. Set it in Mail Settings → POP3/SMTP/IMAP. SMS verification is required the first time." } },
+        { "@type": "Question", name: "Why does my IMAP keep getting blocked?", acceptedAnswer: { "@type": "Answer", text: "NetEase requires SMS verification the first time you turn on IMAP and again periodically. Check Settings → POP3/SMTP/IMAP for any verification prompt or expired authorization code." } },
+      ],
+    }),
+  }}
+/>

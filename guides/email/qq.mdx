@@ -31,3 +31,33 @@ QQ Mail uses an **authorization code** instead of an app password. Use the autho
 <Warning>
   Re-enabling IMAP/SMTP or changing security settings may invalidate the authorization code. Regenerate it in the web UI and update your client.
 </Warning>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="What's the 授权码 (authorization code) and why do I need it?">
+    QQ Mail's app password — a 16-character code separate from your QQ login. Generated in Mail Settings when you enable IMAP/SMTP. Your QQ login password will not authenticate over IMAP.
+  </Accordion>
+  <Accordion title="Where do I enable IMAP in QQ Mail?">
+    QQ Mail web → **Settings** → **Account** → scroll to **POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV Service** → enable **IMAP/SMTP Service**. SMS verification is required.
+  </Accordion>
+  <Accordion title="Does it work for @foxmail.com addresses?">
+    Yes — Foxmail is QQ Mail's enterprise/personal brand variant on the same backend. Use the same `imap.qq.com` / `smtp.qq.com` hosts with the Foxmail address as username.
+  </Accordion>
+</AccordionGroup>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://sendroid.app/docs/guides/email/qq#faq",
+      mainEntity: [
+        { "@type": "Question", name: "What is the QQ Mail authorization code?", acceptedAnswer: { "@type": "Answer", text: "QQ Mail's app password — a 16-character code separate from your QQ login. Generated in Mail Settings when you enable IMAP/SMTP. Your QQ login password will not authenticate over IMAP." } },
+        { "@type": "Question", name: "Where do I enable IMAP in QQ Mail?", acceptedAnswer: { "@type": "Answer", text: "QQ Mail web → Settings → Account → scroll to POP3/IMAP/SMTP/Exchange/CardDAV/CalDAV Service → enable IMAP/SMTP Service. SMS verification is required." } },
+        { "@type": "Question", name: "Does it work for @foxmail.com addresses?", acceptedAnswer: { "@type": "Answer", text: "Yes — Foxmail is QQ Mail's enterprise/personal brand variant on the same backend. Use the same imap.qq.com / smtp.qq.com hosts with the Foxmail address as username." } },
+      ],
+    }),
+  }}
+/>

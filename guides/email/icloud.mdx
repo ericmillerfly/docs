@@ -28,3 +28,33 @@ icon: "apple"
 <Warning>
   `@icloud.com` aliases must be enabled in iCloud Mail settings. The SMTP "From" address must match your primary iCloud address or a verified alias.
 </Warning>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Why an app-specific password?">
+    Apple requires it for any third-party mail client when Two-Factor Authentication is enabled — which is required on all current Apple IDs. It's a 16-character one-time password scoped to a single client.
+  </Accordion>
+  <Accordion title="Can I revoke access later?">
+    Yes. Go to [appleid.apple.com](https://appleid.apple.com) → Sign-In and Security → App-Specific Passwords → delete the entry. The client loses access immediately.
+  </Accordion>
+  <Accordion title="Does this work with @me.com and @mac.com addresses?">
+    Yes — those are legacy iCloud Mail addresses on the same backend. Use the same IMAP/SMTP hosts and an app-specific password generated against your Apple ID.
+  </Accordion>
+</AccordionGroup>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://sendroid.app/docs/guides/email/icloud#faq",
+      mainEntity: [
+        { "@type": "Question", name: "Why an app-specific password?", acceptedAnswer: { "@type": "Answer", text: "Apple requires it for any third-party mail client when Two-Factor Authentication is enabled — which is required on all current Apple IDs. It's a 16-character one-time password scoped to a single client." } },
+        { "@type": "Question", name: "Can I revoke access later?", acceptedAnswer: { "@type": "Answer", text: "Yes. At appleid.apple.com → Sign-In and Security → App-Specific Passwords → delete the entry. Access is cut immediately." } },
+        { "@type": "Question", name: "Does this work with @me.com and @mac.com addresses?", acceptedAnswer: { "@type": "Answer", text: "Yes — those are legacy iCloud Mail addresses on the same backend. Use the same IMAP/SMTP hosts and an app-specific password generated against your Apple ID." } },
+      ],
+    }),
+  }}
+/>

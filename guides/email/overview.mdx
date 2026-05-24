@@ -85,3 +85,20 @@ When connecting your mailbox in a third-party email client (Outlook, Apple Mail,
 <Check>
   After setup, test both **incoming (IMAP)** and **outgoing (SMTP)** once in your client before using the account in production or automation.
 </Check>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://sendroid.app/docs/guides/email/overview#faq",
+      mainEntity: [
+        { "@type": "Question", name: "Connection failed: username or password incorrect — what now?", acceptedAnswer: { "@type": "Answer", text: "Confirm you are using an app password or authorization code, not your web login password. For Gmail, verify IMAP is enabled in the web settings. For QQ/163, regenerate the authorization code if it expired or after re-enabling the service." } },
+        { "@type": "Question", name: "SMTP fails but IMAP works — why?", acceptedAnswer: { "@type": "Answer", text: "Check that the SMTP port matches the encryption method (465 for SSL, 587 for STARTTLS). Some networks block ports 465/587 — try switching ports or networks." } },
+        { "@type": "Question", name: "Cannot find Google app passwords", acceptedAnswer: { "@type": "Answer", text: "You must enable two-step verification first. Google Workspace admins may disable this feature. Some account types that sign in only through Google do not support app passwords." } },
+        { "@type": "Question", name: "Outlook requires Modern Authentication", acceptedAnswer: { "@type": "Answer", text: "Enterprise Microsoft 365 may disable basic authentication. Use an OAuth-capable client, or ask your IT admin to enable SMTP AUTH if policy allows." } },
+      ],
+    }),
+  }}
+/>

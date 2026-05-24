@@ -25,3 +25,33 @@ icon: "yahoo"
 
 - **Username**: Full Yahoo email address
 - **Password**: App password
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Why won't my regular Yahoo password work?">
+    Yahoo deprecated basic-password auth for IMAP/SMTP. Third-party clients must use an app password generated in Account Security.
+  </Accordion>
+  <Accordion title="Is Yahoo Mail Plus required?">
+    No. The free Yahoo Mail tier supports IMAP, SMTP, and app passwords. Yahoo Mail Plus adds extra storage and removes ads but isn't required for third-party mail clients.
+  </Accordion>
+  <Accordion title="Does it work for AOL Mail?">
+    Yes — AOL runs on Yahoo's backend. Generate an AOL app password at [login.aol.com](https://login.aol.com) and use the AOL IMAP/SMTP hosts (`imap.aol.com` / `smtp.aol.com`).
+  </Accordion>
+</AccordionGroup>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://sendroid.app/docs/guides/email/yahoo#faq",
+      mainEntity: [
+        { "@type": "Question", name: "Why won't my regular Yahoo password work?", acceptedAnswer: { "@type": "Answer", text: "Yahoo deprecated basic-password auth for IMAP/SMTP. Third-party clients must use an app password generated in Account Security." } },
+        { "@type": "Question", name: "Is Yahoo Mail Plus required?", acceptedAnswer: { "@type": "Answer", text: "No. The free Yahoo Mail tier supports IMAP, SMTP, and app passwords." } },
+        { "@type": "Question", name: "Does it work for AOL Mail?", acceptedAnswer: { "@type": "Answer", text: "Yes — AOL runs on Yahoo's backend. Generate an AOL app password at login.aol.com and use imap.aol.com / smtp.aol.com." } },
+      ],
+    }),
+  }}
+/>

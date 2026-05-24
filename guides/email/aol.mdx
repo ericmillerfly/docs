@@ -26,3 +26,33 @@ AOL shares a similar app password flow with Yahoo under the Verizon Media ecosys
 
 - **Username**: Full AOL email address
 - **Password**: App password
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Are AOL and Yahoo Mail the same?">
+    Same backend — Verizon Media (now Yahoo Inc.) merged the brands. Settings differ only in hostnames: AOL uses `imap.aol.com` / `smtp.aol.com`, Yahoo uses `imap.mail.yahoo.com` / `smtp.mail.yahoo.com`.
+  </Accordion>
+  <Accordion title="Where do I generate an AOL app password?">
+    [login.aol.com](https://login.aol.com) → Account Security → **Generate app password**. Requires two-step verification to be on first.
+  </Accordion>
+  <Accordion title="Does this work for AOL.de / AOL.co.uk?">
+    Yes — all AOL country domains route through the same servers. Use the same IMAP/SMTP hosts and your full AOL address as username.
+  </Accordion>
+</AccordionGroup>
+
+<script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": "https://sendroid.app/docs/guides/email/aol#faq",
+      mainEntity: [
+        { "@type": "Question", name: "Are AOL and Yahoo Mail the same?", acceptedAnswer: { "@type": "Answer", text: "Same backend — Verizon Media (now Yahoo Inc.) merged the brands. Settings differ only in hostnames: AOL uses imap.aol.com / smtp.aol.com, Yahoo uses imap.mail.yahoo.com / smtp.mail.yahoo.com." } },
+        { "@type": "Question", name: "Where do I generate an AOL app password?", acceptedAnswer: { "@type": "Answer", text: "login.aol.com → Account Security → Generate app password. Requires two-step verification to be on first." } },
+        { "@type": "Question", name: "Does this work for AOL.de / AOL.co.uk?", acceptedAnswer: { "@type": "Answer", text: "Yes — all AOL country domains route through the same servers. Use the same IMAP/SMTP hosts and your full AOL address as username." } },
+      ],
+    }),
+  }}
+/>
