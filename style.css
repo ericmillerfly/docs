@@ -1,11 +1,10 @@
-nav-logo {
-  height: 56px;
-  max-height: 56px;
+#navbar .h-16 {
+  height: 5.5rem !important;
 }
 
-nav-logo img {
-  height: 56px;
-  width: auto;
-  max-height: 56px;
-  object-fit: contain;
+#navbar img.nav-logo {
+  height: 4rem !important;
+  max-height: 4rem !important;
+  width: auto !important;
+  object-fit: contain !important;
 }
